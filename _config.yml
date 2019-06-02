@@ -11,8 +11,8 @@ github_repo: "https://github.com/bboyhao/bboyhao.github.io" # you code repositor
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "努力，奋斗，做大做强！"
+sidebar-avatar: /img/bboyhao_jpg.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
