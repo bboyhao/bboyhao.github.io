@@ -1,11 +1,11 @@
 ---
-layout: post
-title: Goroutine and Concurrency
-subtitle: Goroutine 学习总结
-data: 2019-06-04
-author: bboyhao
+layout: 	post
+title: 		Goroutine and Concurrency
+subtitle: 	Goroutine 学习总结
+date: 		2019-06-04
+author: 	bboyhao
 header-img:
-catalog: true
+catalog: 	true
 tag:
     - Go
 ---
