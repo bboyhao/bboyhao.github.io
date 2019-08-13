@@ -14,8 +14,8 @@ tag:
 >终于要把这个坑填了
 
 ## Overview 
-Red-black trees are a variation of binary search trees to ensure that the tree
-is balanced. Its height is __O(lg n), where n is the number of nodes in the tree.
+Red-black trees is a variation of binary search tree to ensure that the tree
+is balanced. Its height is O(lg n), where n is the number of nodes in the tree.
 Operations like searching, inserting, deleting a node take O(lg n) time in the
 worst case. Its performance is better and more stable than usual binary search
 tree when binary search tree is imbalanced.
@@ -44,7 +44,7 @@ leaf, not counting x itself.
 Black-height of a red-black tree is the black-height of its root.
 
 Consider a node x in an red-black tree: The longest descending path from x to a
-leaf has legth h(x), which is at most twice the length of the shortest descending
+leaf has length h(x), which is at most twice the length of the shortest descending
 path from x to a leaf.
 Explanation: The shortest path possible is such that all the nodes on this path
 are black(Property 5). If we want to lengthen this path, we can add red nodes into it.
@@ -60,7 +60,42 @@ Rotations are the basic tree-restructuring operation for almost all balanced
 search trees. Rotation takes a red-black tree and a node. It changes pointers to
 changes the local structure, and won't violate the bianry-search tree property.
 Left rotation and right rotation are inverses.
-(Here need rotation image)
+
+### Left Rotation pseudo code
+```
+leftRotate(BST T, TreeNode x){
+    y = x.right
+    x.right = y.left
+    if y.left != T.nil
+        y.left.pre = x
+    y.pre = x.pre
+    if x.pre == T.nil
+        T.root = y
+    elseif x = x.pre.left
+        x.pre.left = y
+    else x.pre.right =y
+    y.left = x
+    x.pre = y
+}
+```
+
+### Right Rotation pseudo code
+```
+rightRotate(BST T, TreeNode y){
+    x = y.left
+    y.left = x.right
+    if x.right != T.nil
+        x.right.pre = y
+    x.pre = y.pre
+    if y.pre == T.nil
+        T.root = x
+    elseif y == y.pre.left
+        y.pre.left = x
+    else y.pre.right = x
+    x.right = y
+    y.pre = x
+}
+```
 
 To Be Continued...
 
